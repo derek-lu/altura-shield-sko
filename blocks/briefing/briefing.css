@@ -1,0 +1,127 @@
+/* navy section: copy on the left, form on the right */
+main > .section:has(.briefing) {
+  background-color: var(--navy);
+  color: var(--on-navy-text);
+  scroll-margin-top: var(--nav-height);
+}
+
+main > .section:has(.briefing) h2 {
+  color: #fff;
+}
+
+main > .section:has(.briefing) > .default-content-wrapper > p:first-child {
+  color: #9cc4e0;
+}
+
+main > .section:has(.briefing) a:focus-visible {
+  outline-color: #fff;
+}
+
+main > .section:has(.briefing) .default-content-wrapper ul {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+main > .section:has(.briefing) .default-content-wrapper li {
+  position: relative;
+  padding-left: 34px;
+}
+
+main > .section:has(.briefing) .default-content-wrapper li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  background: url("../../icons/circle-check.svg") center / contain no-repeat;
+}
+
+.briefing .briefing-form,
+.briefing .briefing-thanks {
+  display: grid;
+  gap: 16px;
+  border-radius: 14px;
+  padding: 30px;
+  background: #fff;
+  color: var(--graphite);
+}
+
+.briefing .briefing-form[hidden],
+.briefing .briefing-thanks[hidden] {
+  display: none;
+}
+
+.briefing .briefing-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.briefing label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.briefing input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1.5px solid #9aa7b3;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font: 400 17px/1.2 var(--body-font-family);
+  color: var(--navy);
+}
+
+.briefing button.button {
+  justify-content: center;
+}
+
+.briefing .briefing-message {
+  font-size: 13px;
+}
+
+.briefing .briefing-error {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b3261e;
+}
+
+.briefing .briefing-thanks h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (width >= 520px) {
+  .briefing .briefing-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width >= 900px) {
+  main > .section:has(.briefing) {
+    display: grid;
+    grid-template-columns: minmax(0, 560px) minmax(0, 560px);
+    justify-content: center;
+    align-items: start;
+    gap: 0;
+  }
+
+  main > .section:has(.briefing) > div {
+    margin: 0;
+    max-width: none;
+  }
+
+  main > .section:has(.briefing) > .default-content-wrapper {
+    margin-bottom: 0;
+    padding-right: 40px;
+  }
+}

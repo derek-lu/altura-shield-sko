@@ -1,0 +1,59 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.products .products-list {
+  display: grid;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.products li .icon {
+  flex: none;
+  margin-top: 2px;
+}
+
+.products li p {
+  margin: 0;
+}
+
+.products li strong {
+  color: var(--navy);
+}
+
+.products .products-diagram {
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.products .products-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: var(--body-font-family);
+}
+
+@media (width >= 900px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+
+  /* pull the list up beside the section heading */
+  main > .section:has(.products) > .default-content-wrapper {
+    margin-bottom: 28px;
+  }
+}

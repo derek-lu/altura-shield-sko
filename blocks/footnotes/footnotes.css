@@ -1,0 +1,21 @@
+main > .section:has(.footnotes) {
+  padding: 44px 0 24px;
+  background-color: #fff;
+}
+
+.footnotes .footnotes-list {
+  max-width: 60em;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.footnotes li {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
+}
+
+main sup a:any-link {
+  padding: 0 2px;
+  font-weight: 700;
+  text-decoration: none;
+}

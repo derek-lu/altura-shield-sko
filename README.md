@@ -1,5 +1,33 @@
-# Your Project's Title...
-Your project's description...
+# Altura Shield demo site
+
+An AEM Edge Delivery Services demo featuring the Altura Shield case study at
+`/partners/rapid-response`, including its `#briefing` and `#advisory` anchors.
+
+## Case study deployment
+
+The supplied case-study package's `code/` directory is installed at the repository
+root. Its colors, self-hosted fonts, header, and footer apply site-wide; this is
+intended for a dedicated Altura Shield demo site.
+
+Code deploys by pushing to `main`. Content is uploaded separately from the supplied
+package using `upload-to-da.sh`, with `DA_ORG=derek-lu`,
+`DA_SITE=altura-shield-sko`, and a locally supplied `DA_TOKEN` IMS access token.
+Never commit the token.
+
+After uploading, open, preview, and publish these documents in da.live:
+
+- `/partners/rapid-response`
+- `/partners/rapid-response-nav`
+- `/partners/rapid-response-footer`
+
+The page metadata selects its own nav and footer, leaving site-wide `/nav` and
+`/footer` documents unchanged. The banner lives at
+`/partners/media/altura-shield-case-study-banner.jpg`.
+
+The response times, event and briefing dates, and address are demo values.
+Advisory and privacy URLs use `www.alturashield.example`. The briefing form only
+shows a local thank-you message until an author adds an `Action` row pointing
+to a registration endpoint.
 
 ## Environments
 - Preview: https://main--altura-shield-sko--derek-lu.aem.page/

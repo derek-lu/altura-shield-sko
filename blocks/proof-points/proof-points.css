@@ -1,0 +1,60 @@
+.proof-points {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.proof-points .proof-point {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.proof-points .proof-point:first-child {
+  border-top: 0;
+}
+
+.proof-points p {
+  margin: 0;
+}
+
+.proof-points .proof-point-label {
+  font-family: var(--mono-font-family);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+}
+
+.proof-points .proof-point-value p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font: 500 44px/1 var(--mono-font-family);
+  color: var(--navy);
+}
+
+.proof-points .proof-point-value .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.proof-points .proof-point-text {
+  font-size: 16px;
+}
+
+@media (width >= 900px) {
+  .proof-points {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .proof-points .proof-point {
+    padding: 36px 32px 34px;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .proof-points .proof-point:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}

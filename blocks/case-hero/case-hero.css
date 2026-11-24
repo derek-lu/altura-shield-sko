@@ -1,0 +1,115 @@
+main > .section:has(.case-hero) {
+  padding: 0;
+  background-color: var(--navy);
+}
+
+main > .section > .case-hero-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* banner: the campaign artwork as supplied, never cropped */
+.case-hero .case-hero-banner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.case-hero .case-hero-media {
+  display: block;
+  line-height: 0;
+}
+
+.case-hero .case-hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 800;
+}
+
+.case-hero a.case-hero-media:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+}
+
+/* intro under the banner */
+.case-hero .case-hero-text {
+  box-sizing: border-box;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+  color: var(--on-navy-text);
+}
+
+.case-hero h1 {
+  color: #fff;
+  font-family: var(--display-font-family);
+  font-weight: 900;
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+}
+
+/* the proof phrase is set in green, never italic (rule T2) */
+.case-hero h1 em {
+  font-style: normal;
+  color: var(--green-on-navy);
+}
+
+.case-hero .case-hero-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.case-hero .case-hero-text > p {
+  max-width: 44em;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.case-hero .case-hero-actions p {
+  margin: 0;
+}
+
+.case-hero h1:not(.case-hero-sr-only) + p {
+  margin-top: 22px;
+}
+
+.case-hero .case-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.case-hero .case-hero-actions a:focus-visible {
+  outline-color: #fff;
+}
+
+.case-hero .case-hero-actions a:not(.button):any-link {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (width >= 900px) {
+  .case-hero .case-hero-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px 48px;
+    padding: 36px 24px 44px;
+  }
+
+  .case-hero .case-hero-text > p {
+    flex: 1 1 32em;
+  }
+
+  .case-hero .case-hero-actions {
+    margin-top: 0;
+  }
+}
